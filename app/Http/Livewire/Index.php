@@ -58,7 +58,8 @@ class Index extends Component
 
         $order->save();
 
-        session()->flash('message', 'Order Placed Successfully.');
+        session()->flash('message', 'Thank You! The Seller Will Contact You Soon Enough.');
+        return redirect()->route('purchases');
   
         $this->closeModal();
         $this->resetInputFields();

@@ -23,7 +23,7 @@ class Orders extends Component
         $order = Order::find($id);
 
         if($order->status == "Pending") {
-            $order->status = "Done";
+            $order->status = "Accepted";
         }else{
             $order->status = "Pending";
         }

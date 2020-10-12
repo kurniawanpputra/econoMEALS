@@ -26,6 +26,9 @@
                             {{ __('Manage Orders') }}
                         </x-jet-nav-link>
                     @endif
+                    <x-jet-nav-link href="{{ route('purchases') }}" :active="request()->routeIs('purchases')">
+                        {{ __('My Orders') }}
+                    </x-jet-nav-link>
                 </div>
             </div>
 
@@ -142,6 +145,9 @@
                     {{ __('Manage Orders') }}
                 </x-jet-responsive-nav-link>
             @endif
+            <x-jet-responsive-nav-link href="{{ route('purchases') }}" :active="request()->routeIs('purchases')">
+                {{ __('My Orders') }}
+            </x-jet-responsive-nav-link>
         </div>
 
         <!-- Responsive Settings Options -->

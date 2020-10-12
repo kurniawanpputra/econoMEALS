@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Foods;
 use App\Http\Livewire\Index;
 use App\Http\Livewire\Orders;
+use App\Http\Livewire\Purchases;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,12 +23,13 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return redirect('/index');
+    return redirect('/all-foods');
 })->name('dashboard');
 
 Route::group(['middleware' => 'seller'], function () {
-    Route::get('foods', Foods::class)->name('foods');
-    Route::get('orders', Orders::class)->name('orders');
+    Route::get('manage-foods', Foods::class)->name('foods');
+    Route::get('manage-orders', Orders::class)->name('orders');
 });
 
-Route::get('index', Index::class)->name('index');
+Route::get('all-foods', Index::class)->name('index');
+Route::get('my-orders', Purchases::class)->name('purchases');
