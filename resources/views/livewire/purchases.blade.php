@@ -36,7 +36,7 @@
                         <td class="border px-4 py-2">{{ \App\Models\Food::find($order->food_id)->title }}</td>
                         <td class="border px-4 py-2">{{ \App\Models\User::find($order->user_id)->name }}</td>
                         <td class="border px-4 py-2">{{ $order->qty }} x {{ \App\Models\Food::find($order->food_id)->price }} = Rp{{ number_format($order->qty * \App\Models\Food::find($order->food_id)->price, 2, ',', '.') }}</td>
-                        <td class="border px-4 py-2">{{ number_format(\App\Models\Food::find($order->food_id)->calories, 0, ',', '.') }} / Serving</td>
+                        <td class="border px-4 py-2">{{ number_format(\App\Models\Food::find($order->food_id)->calories, 0, ',', '.') }} Kcal / Serving</td>
                         <td class="border px-4 py-2">{{ $order->phone }}</td>
                         <td class="border px-4 py-2"><span class="font-bold">{{ $order->status }}</span></td>
                         <td class="border px-4 py-2">{{ date('d-m-Y H:i', strtotime($order->created_at)) }}</td>

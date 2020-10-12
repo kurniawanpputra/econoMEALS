@@ -10,7 +10,7 @@
             <a href="{{route('calories')}}">
                 <div class="p-2 bg-green-800 items-center text-green-100 leading-none lg:rounded-full flex lg:inline-flex" role="alert">
                     <span class="flex rounded-full bg-green-500 uppercase px-2 py-1 text-xs font-bold mr-3">Calories Counter</span>
-                    <span class="font-semibold mr-2 text-left flex-auto hover:underline">You can consume {{number_format($todayCal, 0, ',', '.')}} calories today. Unsure? Recheck you daily needs now.</span>
+                    <span class="font-semibold mr-2 text-left flex-auto hover:underline">You can consume {{number_format($todayCal, 0, ',', '.')}} kilocalories today. Unsure? Recheck you daily needs now.</span>
                     <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z"/></svg>
                 </div>
             </a>
@@ -41,7 +41,7 @@
                             <p class="text-gray-700 text-base">Location: {{ $food->location }}</p>
                             <p class="text-gray-700 text-base">Price: {{ 'Rp' . number_format($food->price, 2, ',', '.') }}</p>
                             <p class="text-gray-700 text-base">Status: <span class="font-bold @if($food->status == 'Available') text-green-500 @else text-red-500 @endif">{{ $food->status }}</span></p>
-                            <p class="text-gray-700 text-base">Calories: {{number_format($food->calories, 0, ',', '.')}}</p>
+                            <p class="text-gray-700 text-base">Calories: {{number_format($food->calories, 0, ',', '.')}} Kcal</p>
                             <!-- <p class="text-gray-700 text-base">Sold: {{ $food->sold }}</p> -->
                             <!-- <p class="text-gray-700 text-base">Added: {{ date('d-m-Y H:i', strtotime($food->created_at)) }}</p> -->
                         </div>

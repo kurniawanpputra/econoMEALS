@@ -31,7 +31,7 @@
                         <div class="flex items-center">
                             <div class="text-sm">
                                 @if(!isset($todayCal->calories))
-                                    <button wire:click="count()" class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded">Count My Need</button>
+                                    <button wire:click="count()" class="bg-green-600 hover:bg-green-500 text-white font-bold py-2 px-4 rounded">Count My Needs</button>
                                 @else
                                     <button wire:click="clear()" class="bg-yellow-400 hover:bg-yellow-300 text-white font-bold py-2 px-4 rounded">Reset Data</button>
                                 @endif

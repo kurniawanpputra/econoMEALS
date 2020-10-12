@@ -34,7 +34,7 @@
                             <p class="text-gray-700 text-base">Location: {{ $food->location }}</p>
                             <p class="text-gray-700 text-base">Price: {{ 'Rp' . number_format($food->price, 2, ',', '.') }}</p>
                             <p class="text-gray-700 text-base">Status: <span class="font-bold @if($food->status == 'Available') text-green-500 @else text-red-500 @endif">{{ $food->status }}</span></p>
-                            <p class="text-gray-700 text-base">Calories: {{number_format($food->calories, 0, ',', '.')}}</p>
+                            <p class="text-gray-700 text-base">Calories: {{number_format($food->calories, 0, ',', '.')}} Kcal</p>
                             <p class="text-gray-700 text-base">Sold: {{number_format($food->sold, 0, ',', '.')}}</p>
                             <!-- <p class="text-gray-700 text-base">Added: {{ date('d-m-Y H:i', strtotime($food->created_at)) }}</p> -->
                         </div>
