@@ -35,7 +35,7 @@ Route::group(['middleware' => 'seller'], function () {
 
 Route::get('all-foods', Index::class)->name('index');
 Route::get('my-orders', Purchases::class)->name('purchases');
-Route::get('calories-counter', Calories::class)->name('calories');
+Route::get('calorie-counter', Calories::class)->name('calories');
 
 Route::group(['middleware' => 'admin'], function () {
     Route::get('orders-history', Histories::class)->name('histories');

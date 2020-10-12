@@ -1,6 +1,6 @@
 <x-slot name="header">
     <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        Calories Counter
+        Calorie Counter
     </h2>
 </x-slot>
 
