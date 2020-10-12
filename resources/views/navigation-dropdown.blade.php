@@ -29,6 +29,14 @@
                     <x-jet-nav-link href="{{ route('purchases') }}" :active="request()->routeIs('purchases')">
                         {{ __('My Orders') }}
                     </x-jet-nav-link>
+                    <x-jet-nav-link href="{{ route('calories') }}" :active="request()->routeIs('calories')">
+                        {{ __('Calories Counter') }}
+                    </x-jet-nav-link>
+                    @if(auth()->user()->role_id == 3)
+                        <x-jet-nav-link href="{{ route('histories') }}" :active="request()->routeIs('histories')">
+                            {{ __('Orders History') }}
+                        </x-jet-nav-link>
+                    @endif
                 </div>
             </div>
 
@@ -148,6 +156,14 @@
             <x-jet-responsive-nav-link href="{{ route('purchases') }}" :active="request()->routeIs('purchases')">
                 {{ __('My Orders') }}
             </x-jet-responsive-nav-link>
+            <x-jet-responsive-nav-link href="{{ route('calories') }}" :active="request()->routeIs('calories')">
+                {{ __('Calories Counter') }}
+            </x-jet-responsive-nav-link>
+            @if(auth()->user()->role_id == 3)
+                <x-jet-responsive-nav-link href="{{ route('histories') }}" :active="request()->routeIs('histories')">
+                    {{ __('Orders History') }}
+                </x-jet-responsive-nav-link>
+            @endif
         </div>
 
         <!-- Responsive Settings Options -->

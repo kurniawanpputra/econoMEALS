@@ -6,6 +6,8 @@ use App\Http\Livewire\Foods;
 use App\Http\Livewire\Index;
 use App\Http\Livewire\Orders;
 use App\Http\Livewire\Purchases;
+use App\Http\Livewire\Calories;
+use App\Http\Livewire\Histories;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,3 +35,8 @@ Route::group(['middleware' => 'seller'], function () {
 
 Route::get('all-foods', Index::class)->name('index');
 Route::get('my-orders', Purchases::class)->name('purchases');
+Route::get('calories-counter', Calories::class)->name('calories');
+
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('orders-history', Histories::class)->name('histories');
+});

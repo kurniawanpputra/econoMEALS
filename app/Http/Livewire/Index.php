@@ -5,15 +5,21 @@ namespace App\Http\Livewire;
 use Livewire\Component;
 use App\Models\Order;
 use App\Models\Food;
+use App\Models\Calorie;
 
 class Index extends Component
 {
-    public $foods, $food_id, $user_id, $qty, $phone, $status;
+    public $foods, $food_id, $user_id, $qty, $phone, $status, $todayCal;
     public $isOpen = 0;
 
     public function render()
     {
         $this->foods = Food::orderBy('created_at', 'desc')->get();
+        $temp = Calorie::where('user_id', auth()->user()->id)->first();
+
+        if(!empty($temp)) {
+            $this->todayCal = $temp->calories;
+        }
 
         return view('livewire.index');
     }
