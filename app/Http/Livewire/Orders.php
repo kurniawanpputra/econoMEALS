@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 use App\Models\Order;
+use App\Models\Food;
 
 class Orders extends Component
 {
@@ -22,7 +23,8 @@ class Orders extends Component
     {
         $order = Order::find($id);
 
-        if($order->status == "Pending") {
+        if($order->status == "Pending")
+        {
             $order->status = "Accepted";
         }else{
             $order->status = "Pending";
@@ -36,10 +38,12 @@ class Orders extends Component
     public function reject($id)
     {
         $order = Order::find($id);
-
         $order->status = "Rejected";
-
         $order->save();
+
+        $food = Food::find($order->food_id);
+        $food->sold -= $order->qty;
+        $food->save();
 
         session()->flash('message', 'Order Rejected Successfully.');
     }

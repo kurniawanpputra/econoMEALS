@@ -48,15 +48,17 @@ class Index extends Component
         ]);
 
         $order = new Order;
-
         $order->food_id = $this->food_id;
         $order->user_id = auth()->user()->id;
         $order->seller_id = Food::find($this->food_id)->user_id;
         $order->qty = $this->qty;
         $order->phone = $this->phone;
         $order->status = "Pending";
-
         $order->save();
+
+        $food = Food::find($this->food_id);
+        $food->sold += $this->qty;
+        $food->save();
 
         session()->flash('message', 'Thank You! The Seller Will Contact You Soon Enough.');
         return redirect()->route('purchases');
