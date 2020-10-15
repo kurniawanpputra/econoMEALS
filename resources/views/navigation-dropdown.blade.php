@@ -6,7 +6,8 @@
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <h1 style="font-size: 1.5rem; font-weight: bold;">econo<span style="color: #8dda06;">MEALS</span></h1>
+                        <!-- <h1 style="font-size: 1.5rem; font-weight: bold;">econo<span style="color: #8dda06;">MEALS</span></h1> -->
+                        <img class="w-full" src="{{ asset('img/logo only.png') }}" alt="econoMEALS Logo" style="height: 50px; width: auto; user-drag: none; -moz-user-select: none; -webkit-user-drag: none; -webkit-user-select: none; -ms-user-select: none; pointer-events: none;">
                     </a>
                 </div>
 

@@ -1,7 +1,8 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <h1 style="font-size: 2rem; font-weight: bold;">econo<span style="color: #8dda06;">MEALS</span></h1>
+            <!-- <h1 style="font-size: 2rem; font-weight: bold;">econo<span style="color: #8dda06;">MEALS</span></h1> -->
+            <img class="w-full" src="{{ asset('img/logo.png') }}" alt="econoMEALS Logo" style="user-drag: none; -moz-user-select: none; -webkit-user-drag: none; -webkit-user-select: none; -ms-user-select: none; pointer-events: none;">
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />

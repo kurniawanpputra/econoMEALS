@@ -50,7 +50,8 @@
 
             <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
                 <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                    <h1 class="text-white text-xl">econo<span class="text-green">MEALS</span></h1>
+                    <!-- <h1 class="text-white text-xl">econo<span class="text-green">MEALS</span></h1> -->
+                    <img class="w-full" src="{{ asset('img/logo.png') }}" alt="econoMEALS Logo" style="user-drag: none; -moz-user-select: none; -webkit-user-drag: none; -webkit-user-select: none; -ms-user-select: none; pointer-events: none;">
                 </div>
             </div>
         </div>
